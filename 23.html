@@ -3,75 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLI Dungeon Crawl Experience Report</title>
+    <title>CLI DUNGEON CRAWL // SYSTEM REPORT</title>
     <style>
+        :root {
+            --matrix-green: #00ff41;
+            --terminal-black: #0a0a0a;
+            --glow-blue: #00b4ff;
+            --error-red: #ff0038;
+            --cyber-purple: #6a0dad;
+            --scanline: rgba(0, 255, 65, 0.05);
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #282c34;
-            color: #f0f0f0;
+            background-color: var(--terminal-black);
+            color: var(--matrix-green);
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
             margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 50px auto;
-            background-color: #1e2227;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow-x: hidden;
         }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(var(--scanline) 1px, transparent 1px),
+                linear-gradient(90deg, var(--scanline) 1px, transparent 1px);
+            background-size: 4px 4px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
         h1 {
-            color: #7a7a7a;
+            color: var(--glow-blue);
             text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 8px var(--glow-blue);
+            border-bottom: 1px dashed var(--matrix-green);
+            padding-bottom: 10px;
         }
+
         h2 {
-            color: #f39c12;
-            font-size: 1.5em;
-            margin-top: 20px;
+            color: var(--cyber-purple);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            border-left: 3px solid var(--matrix-green);
+            padding-left: 10px;
         }
+
         p {
-            line-height: 1.6;
-            font-size: 1.1em;
-            color: #dcdcdc;
+            margin-bottom: 1.2rem;
         }
-        .emoji {
-            font-size: 2em;
-            color: #e74c3c;
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid var(--matrix-green);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+            position: relative;
         }
-        .highlight {
-            color: #3498db;
+
+        .container::after {
+            content: ">> SYSTEM REPORT // ACCESS GRANTED <<";
+            position: absolute;
+            bottom: -25px;
+            right: 0;
+            color: var(--matrix-green);
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .command {
+            color: var(--glow-blue);
             font-weight: bold;
         }
+
+        .error {
+            color: var(--error-red);
+            text-shadow: 0 0 5px var(--error-red);
+        }
+
+        .success {
+            color: var(--matrix-green);
+            text-shadow: 0 0 5px var(--matrix-green);
+        }
+
+        .highlight {
+            background-color: rgba(0, 255, 65, 0.1);
+            padding: 2px 4px;
+            border: 1px dashed var(--matrix-green);
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
         .footer {
             text-align: center;
-            margin-top: 30px;
-            font-size: 1em;
-            color: #888;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--cyber-purple);
+        }
+
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 0.15em;
+            animation: typing 3.5s steps(40, end);
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .glitch {
+            position: relative;
+        }
+
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch::before {
+            color: var(--error-red);
+            z-index: -1;
+            animation: glitch-effect 3s infinite;
+        }
+
+        .glitch::after {
+            color: var(--glow-blue);
+            z-index: -2;
+            animation: glitch-effect 2s infinite reverse;
+        }
+
+        @keyframes glitch-effect {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            80% { transform: translate(3px, -3px); }
+            100% { transform: translate(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>CLI Dungeon Crawl Experience Report</h1>
-        <div class="emoji">🗝️</div>
+        <h1 class="glitch" data-text="CLI DUNGEON CRAWL // SYSTEM REPORT">CLI DUNGEON CRAWL // SYSTEM REPORT</h1>
         
-        <h2>Issues Encountered During Playthrough:</h2>
-        <p>During my playthrough of the CLI Dungeon Crawl, I had to familiarize myself with basic CLI commands like <span class="highlight">cd</span>, <span class="highlight">dir</span>, <span class="highlight">move</span>, and <span class="highlight">attrib</span>. Understanding their proper usage was essential for progressing through the challenge.</p>
+        <div class="typewriter">
+            <p>> Loading session data... <span class="success">SUCCESS</span></p>
+            <p>> Analyzing logs... <span class="success">COMPLETE</span></p>
+        </div>
 
-        <h2>Further Research Conducted:</h2>
-        <p>The CLI Dungeon Crawl game offered a series of puzzles that required knowledge of basic command-line operations. As I navigated through directories and interacted with various files, I realized the importance of mastering commands like <span class="highlight">move</span> and <span class="highlight">dir /a</span>. These commands were essential for progressing through the game’s environment, which mirrored a file system exploration. The challenge was not just about performing commands but understanding the consequences of each action, like unlocking doors or revealing hidden chambers. It was a creative blend of problem-solving and learning through trial and error, which made the entire process enjoyable and engaging.</p>
+        <h2>> ENCOUNTERED ISSUES</h2>
+        <p>During the <span class="highlight">CLI Dungeon Crawl</span>, mastery of terminal commands was essential:</p>
+        <ul>
+            <li><span class="command">cd</span> — directory traversal</li>
+            <li><span class="command">dir</span> — system reconnaissance</li>
+            <li><span class="command">move</span> — object relocation</li>
+            <li><span class="command">attrib</span> — file property analysis</li>
+        </ul>
+        <p>Failure to utilize these would have halted progress.</p>
 
-        <h2>Sources of Help:</h2>
-        <p>Guidance from AI and Aimana.</p>
+        <h2>> RESEARCH & FINDINGS</h2>
+        <p>The game presented CLI-based puzzles requiring precise command execution. Key discoveries:</p>
+        <ul>
+            <li><span class="command">dir /a</span> revealed hidden chambers</li>
+            <li><span class="command">move</span> manipulated dungeon structures</li>
+            <li>File attributes (<span class="command">attrib</span>) altered object behavior</li>
+        </ul>
+        <p>Each action had consequences—doors unlocked, traps disabled, secrets exposed.</p>
 
-        <h2>Overall Experience:</h2>
-        <p>I found the CLI Dungeon Crawl to be an engaging and educational experience. It provided a gamified approach to learning fundamental command-line skills, which made the process more enjoyable. The problem-solving aspect, such as unlocking the <span class="highlight">OpenedDoor</span> and eliminating the <span class="highlight">CursedBook.tome</span>, added an element of mystery and discovery.</p>
-        <p>Additionally, navigating through directories and using commands effectively reinforced my understanding of file system structures and command-line operations. The final reward, the ASCII Chalice, was a fun conclusion to the adventure.</p>
+        <h2>> EXTERNAL ASSISTANCE</h2>
+        <p>When the dungeon's logic proved opaque, external systems provided aid:</p>
+        <ul>
+            <li>AI diagnostic tools</li>
+            <li>Operator "Aimana"</li>
+        </ul>
 
-        <h2>Additional Thoughts:</h2>
-        <p>The link didn’t open—was this part of the game, or is there an issue elsewhere?</p>
+        <h2>> FINAL ASSESSMENT</h2>
+        <p>The <span class="highlight">CLI Dungeon Crawl</span> successfully merged education with engagement:</p>
+        <ul>
+            <li>Core CLI concepts reinforced through gameplay</li>
+            <li>Puzzle-solving required logical deduction</li>
+            <li>The <span class="command">ASCII Chalice</span> served as a satisfying reward</li>
+        </ul>
+
+        <h2>> ANOMALY DETECTED</h2>
+        <p class="error">> One unresolved issue: A non-responsive link. Was this intentional obfuscation or system failure?</p>
 
         <div class="footer">
+            <p>> END OF REPORT // <span class="blink">_</span></p>
         </div>
     </div>
 </body>
