@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI Dungeon Crawl Experience Report</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #282c34;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #1e2227;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #7a7a7a;
+            text-align: center;
+        }
+        h2 {
+            color: #f39c12;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #dcdcdc;
+        }
+        .emoji {
+            font-size: 2em;
+            color: #e74c3c;
+        }
+        .highlight {
+            color: #3498db;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CLI Dungeon Crawl Experience Report</h1>
+        <div class="emoji">🗝️</div>
+        
+        <h2>Issues Encountered During Playthrough:</h2>
+        <p>During my playthrough of the CLI Dungeon Crawl, I had to familiarize myself with basic CLI commands like <span class="highlight">cd</span>, <span class="highlight">dir</span>, <span class="highlight">move</span>, and <span class="highlight">attrib</span>. Understanding their proper usage was essential for progressing through the challenge.</p>
+
+        <h2>Further Research Conducted:</h2>
+        <p>The CLI Dungeon Crawl game offered a series of puzzles that required knowledge of basic command-line operations. As I navigated through directories and interacted with various files, I realized the importance of mastering commands like <span class="highlight">move</span> and <span class="highlight">dir /a</span>. These commands were essential for progressing through the game’s environment, which mirrored a file system exploration. The challenge was not just about performing commands but understanding the consequences of each action, like unlocking doors or revealing hidden chambers. It was a creative blend of problem-solving and learning through trial and error, which made the entire process enjoyable and engaging.</p>
+
+        <h2>Sources of Help:</h2>
+        <p>Guidance from AI and Aimana.</p>
+
+        <h2>Overall Experience:</h2>
+        <p>I found the CLI Dungeon Crawl to be an engaging and educational experience. It provided a gamified approach to learning fundamental command-line skills, which made the process more enjoyable. The problem-solving aspect, such as unlocking the <span class="highlight">OpenedDoor</span> and eliminating the <span class="highlight">CursedBook.tome</span>, added an element of mystery and discovery.</p>
+        <p>Additionally, navigating through directories and using commands effectively reinforced my understanding of file system structures and command-line operations. The final reward, the ASCII Chalice, was a fun conclusion to the adventure.</p>
+
+        <h2>Additional Thoughts:</h2>
+        <p>The link didn’t open—was this part of the game, or is there an issue elsewhere?</p>
+
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
