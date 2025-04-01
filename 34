@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Virtual Library Database Project</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #2d3436;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #0984e3;
+            text-align: center;
+        }
+        h1 {
+            border-bottom: 3px solid #74b9ff;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .highlight {
+            background-color: #e3f8ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .insight {
+            border-left: 4px solid #0984e3;
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #636e72;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dfe6e9;
+        }
+        th {
+            background-color: #0984e3;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f9ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Virtual Library Database Project</h1>
+    
+    <div class="card">
+        <h2>What I Created</h2>
+        <p>I designed a <span class="highlight">comprehensive database system</span> for tracking books in a virtual library, consisting of three well-structured tables:</p>
+        
+        <table>
+            <tr>
+                <th>Table</th>
+                <th>Records</th>
+                <th>Key Features</th>
+            </tr>
+            <tr>
+                <td>Books</td>
+                <td>50</td>
+                <td>Complete catalog with availability status</td>
+            </tr>
+            <tr>
+                <td>Authors</td>
+                <td>41</td>
+                <td>Detailed author profiles with demographics</td>
+            </tr>
+            <tr>
+                <td>Popularity</td>
+                <td>50</td>
+                <td>Engagement metrics and ratings</td>
+            </tr>
+        </table>
+        
+        <div class="insight">
+            This structure shows my understanding of how to organize related data into separate but connected tables.
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>What I Learned</h2>
+        <p>Through this project, I gained valuable experience in:</p>
+        <ul>
+            <li>Designing <span class="highlight">relational database structures</span> with proper table relationships</li>
+            <li>Selecting appropriate <span class="highlight">data types</span> for different kinds of information</li>
+            <li>Implementing <span class="highlight">unique identifiers</span> (Book_ID) for data integrity</li>
+            <li>Creating <span class="highlight">analytical metrics</span> to track book popularity</li>
+            <li>Maintaining <span class="highlight">data consistency</span> across multiple tables</li>
+        </ul>
+        
+        <div class="insight">
+            The project helped me understand how real-world applications manage complex data while keeping it organized and accessible.
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Key Achievements</h2>
+        <p>I'm particularly proud of:</p>
+        <ol>
+            <li>Creating a <span class="highlight">unified system</span> that connects books to their authors and popularity data</li>
+            <li>Including <span class="highlight">multiple dimensions</span> of analysis (ratings, borrow frequency, reviews)</li>
+            <li>Designing <span class="highlight">clear categories</span> for genres and age groups</li>
+            <li>Maintaining <span class="highlight">historical data</span> through checkout records</li>
+            <li>Developing <span class="highlight">status indicators</span> (Available/Checked out)</li>
+        </ol>
+        
+        <div class="insight">
+            This project demonstrates my ability to think critically about data organization and create practical database solutions.
+        </div>
+    </div>
+</body>
+</html>
