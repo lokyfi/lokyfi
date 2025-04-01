@@ -60,10 +60,46 @@
         tr:hover {
             background-color: #f1f9ff;
         }
+        .drive-btn {
+            display: inline-block;
+            background-color: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        .drive-btn:hover {
+            background-color: #3367D6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .btn-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .drive-icon {
+            vertical-align: middle;
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>My Virtual Library Database Project</h1>
+    
+    <div class="btn-container">
+        <a href="https://drive.google.com/drive/folders/1oT1KfSE0A6Tii_b33jbQchD4E1hysZXz?usp=sharing" class="drive-btn" target="_blank">
+            <svg class="drive-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                <path d="M4 6l8.5-5v5H20v14H4V6zm15 12V8h-7V3L5 7v11h14z"/>
+                <path d="M10 16l5-3-5-3v6z"/>
+            </svg>
+            View Full Dataset on Google Drive
+        </a>
+    </div>
     
     <div class="card">
         <h2>What I Created</h2>
