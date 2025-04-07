@@ -7,11 +7,13 @@
     <title>Alina Petrova</title>
     <style>
         :root {
-            --main-color: #6B5B95; /* Unusual purple-blue shade */
-            --accent-pink: #FF9AAE; /* Soft pink */
-            --accent-red: #FF5757; /* Bright red */
+            --main-color: #6B5B95;
+            --accent-pink: #FF9AAE;
+            --accent-red: #FF5757;
             --text-color: #333333;
             --light-color: #F8F7FF;
+            --completed: #4CAF50;
+            --upcoming: #FF9800;
         }
 
         * {
@@ -27,41 +29,30 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
         header {
             background-color: var(--main-color);
             color: white;
             text-align: center;
             padding: 80px 20px;
-            position: relative;
-            border-bottom: 4px solid var(--accent-pink);
         }
 
         h1 {
             font-size: 3.5rem;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 25px;
+            font-size: 1.2rem;
             font-weight: 300;
             color: var(--accent-pink);
         }
 
         main {
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
 
         .section-title {
-            font-size: 2.4rem;
+            font-size: 2rem;
             color: var(--main-color);
             text-align: center;
             margin-bottom: 40px;
@@ -81,8 +72,8 @@
         .assignments {
             background-color: white;
             border-radius: 10px;
-            padding: 40px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .assignment-list {
@@ -90,15 +81,18 @@
         }
 
         .assignment-list li {
-            margin-bottom: 20px;
-            padding: 18px;
+            margin-bottom: 15px;
+            padding: 15px;
             border-radius: 8px;
             background-color: #f9f9f9;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
         }
 
         .assignment-list li:hover {
-            transform: translateX(15px);
+            transform: translateX(10px);
             background-color: #f0f0f0;
         }
 
@@ -106,114 +100,75 @@
             color: var(--main-color);
             text-decoration: none;
             font-weight: 500;
-            display: block;
             padding-left: 15px;
-            border-left: 4px solid var(--accent-pink);
-            transition: color 0.3s ease, border-left-color 0.3s ease;
+            border-left: 3px solid var(--accent-pink);
+            flex-grow: 1;
         }
 
-        .assignment-list a:hover {
-            color: var(--accent-red);
-            border-left-color: var(--accent-red);
+        .status {
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .completed {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: var(--completed);
+        }
+
+        .upcoming {
+            background-color: rgba(255, 152, 0, 0.1);
+            color: var(--upcoming);
         }
 
         footer {
             background-color: var(--main-color);
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 80px;
-            font-size: 1.2rem;
+            padding: 20px 0;
         }
 
-        footer p {
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-
-        /* Decorative elements */
-        .corner-decoration {
-            position: fixed;
-            width: 150px;
-            height: 150px;
-            z-index: -1;
-        }
-
-        .top-left {
-            top: 0;
-            left: 0;
-            background: radial-gradient(circle at top left, var(--accent-pink) 5%, transparent 70%);
-        }
-
-        .bottom-right {
-            bottom: 0;
-            right: 0;
-            background: radial-gradient(circle at bottom right, var(--accent-red) 5%, transparent 70%);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
             }
 
-            .subtitle {
-                font-size: 1.2rem;
-            }
-
             .section-title {
-                font-size: 2rem;
-            }
-
-            .assignments {
-                padding: 30px;
-            }
-
-            .assignment-list li {
-                font-size: 1rem;
-            }
-
-            footer {
-                font-size: 1rem;
-                padding: 20px;
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="corner-decoration top-left"></div>
-    <div class="corner-decoration bottom-right"></div>
-
     <header>
-        <div class="container">
-            <h1>Alina Petrova</h1>
-            <p class="subtitle">Welcome to my personal page</p>
-        </div>
+        <h1>Alina Petrova</h1>
+        <p class="subtitle">Welcome to my personal page</p>
     </header>
 
-    <main class="container">
+    <main>
         <section id="assignments">
             <h2 class="section-title">Assignments</h2>
             <div class="assignments">
                 <ul class="assignment-list">
-                    <li><a href="findme11.html">Assignment 1: FindMe</a></li>
-                    <li><a href="23.html">Assignment 2: Dungeon</a></li>
-                    <li><a href="34">Assignment 3: Virtual Library</a></li>
-                    <li><a href="#">Assignment 4: Final Presentation</a></li>
-                    <li><a href="#">Assignment 5: Group Project</a></li>
-                    <!-- Add more assignments as needed -->
+                    <li><a href="findme11.html">Assignment 1: FindMe</a><span class="status completed">Completed</span></li>
+                    <li><a href="23.html">Assignment 2: Dungeon</a><span class="status completed">Completed</span></li>
+                    <li><a href="34">Assignment 3: Virtual Library</a><span class="status completed">Completed</span></li>
+                    <li><a href="#">Assignment 4: Final Presentation</a><span class="status upcoming">Upcoming</span></li>
+                    <li><a href="#">Assignment 5: Group Project</a><span class="status upcoming">Upcoming</span></li>
                 </ul>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Alina Petrova</p>
-        </div>
+        <p>&copy; 2025 Alina Petrova</p>
     </footer>
 </body>
+
+</html>
+
 
 </html>
 
