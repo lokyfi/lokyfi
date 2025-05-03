@@ -156,6 +156,13 @@
     a:hover {
       text-decoration: underline;
     }
+    .view-report-btn {
+      background-color: #2ecc71;
+      margin-top: 1.5rem;
+    }
+    .view-report-btn:hover {
+      background-color: #27ae60;
+    }
   </style>
 </head>
 <body>
@@ -171,7 +178,7 @@
       <div class="tab" onclick="openTab('assignment1')">Assignment 1</div>
       <div class="tab" onclick="openTab('report')">Report</div>
     </div>
-    
+
     <div id="encrypt-decrypt" class="tab-content active">
       <div class="file-upload">
         <label for="fileInput">Upload Text File</label>
@@ -203,7 +210,7 @@
       <div class="result" id="outputBox">Result will appear here...</div>
       <div class="explanation" id="explanationBox">Explanation will appear here...</div>
     </div>
-    
+
     <div id="learning" class="tab-content">
       <h2>What This Cryptography Showcase Teaches:</h2>
       
@@ -234,7 +241,7 @@
         <li>Basic cryptographic implementation principles</li>
       </ul>
     </div>
-    
+
     <div id="assignment1" class="tab-content">
       <h2>Assignment 1</h2>
       <p>Please enter the link to your assignment document below:</p>
@@ -257,7 +264,7 @@
         </ul>
       </div>
     </div>
-    
+
     <div id="report" class="tab-content">
       <h2>Cryptography Report</h2>
       
@@ -331,6 +338,8 @@
           <li><strong>AES:</strong> Industry standard symmetric encryption with excellent security properties</li>
         </ul>
       </div>
+      
+      <button class="view-report-btn" onclick="window.open('https://docs.google.com/document/d/12kQgxuwlyVOS-F36lwD5kQSJVLnnLXxDDMhGl8iTXpU/edit?usp=drivesdk', '_blank')">View Full Report</button>
     </div>
   </main>
 
