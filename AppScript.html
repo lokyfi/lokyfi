@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCG Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    #totalCCG {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Current Course Grade (CCG) Calculator</h1>
+  <p>This tool calculates your CCG based on the grades and weights you enter in the spreadsheet.</p>
+
+  <h3>Grades Overview:</h3>
+  <table id="gradesTable">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Weight (%)</th>
+        <th>Grade</th>
+        <th>Max Grade</th>
+        <th>Weighted Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data will be inserted here via Google Apps Script -->
+    </tbody>
+  </table>
+
+  <h3>Total CCG:</h3>
+  <p id="totalCCG">Loading...</p>
+
+  <script>
+    // Function to load data from Google Apps Script
+    function loadGrades() {
+      // Fetching data from the Google Apps Script web service
+      fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec')
+        .then(response => response.json())
+        .then(data => {
+          var table = document.getElementById("gradesTable").getElementsByTagName('tbody')[0];
+          data.grades.forEach(function(item) {
+            var row = table.insertRow();
+            row.insertCell(0).innerText = item.category;
+            row.insertCell(1).innerText = item.weight + '%';
+            row.insertCell(2).innerText = item.grade;
+            row.insertCell(3).innerText = item.maxGrade;
+            row.insertCell(4).innerText = item.weightedGrade + '%';
+          });
+
+          // Displaying total CCG
+          document.getElementById("totalCCG").innerText = data.totalCCG + '%';
+        })
+        .catch(error => console.error('Error:', error));
+    }
+    
+    window.onload = loadGrades;
+  </script>
+
+</body>
+</html>
