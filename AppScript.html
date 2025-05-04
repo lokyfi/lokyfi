@@ -1,40 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Current Course Grade</title>
+  <meta charset="UTF-8">
+  <title>Week 7 – Current Course Grade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f7f7f7;
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    .container {
-      max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 30px;
+    h1, h2 {
+      color: #1f3b8c;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      border-left: 4px solid #1f3b8c;
+      padding-left: 12px;
+      margin-top: 40px;
+    }
+    section {
+      background: #fff;
+      padding: 24px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
     }
-    .grade {
-      font-size: 24px;
+    .grade-box {
+      font-size: 1.8rem;
       font-weight: bold;
-      color: #2c3e50;
+      color: #1a7e45;
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin: 6px 0;
+    }
+    a {
+      color: #1f3b8c;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>📊 Current Course Grade</h1>
-    <p>Your current weighted grade is:</p>
-    <p class="grade" id="ccg">Loading...</p>
-  </div>
+  <h1>Week 7 – Current Course Grade</h1>
+
+  <section>
+    <h2>📊 Your Current Grade</h2>
+    <p>The value below is fetched live from a Google Sheet using Google Apps Script:</p>
+    <div id="ccg" class="grade-box">Loading...</div>
+  </section>
+
+  <section>
+    <h2>What is Google Apps Script?</h2>
+    <p>Google Apps Script is a cloud-based scripting platform for light-weight application development in the Google Workspace platform. It uses JavaScript and allows users to automate tasks across Google products like Sheets, Docs, Drive, and more.</p>
+  </section>
+
+  <section>
+    <h2>5Ws of Apps Script</h2>
+    <ul>
+      <li><strong>Who</strong>: Anyone with a Google account can use it.</li>
+      <li><strong>What</strong>: It automates repetitive tasks and extends the functionality of Google apps.</li>
+      <li><strong>Where</strong>: Primarily used within Google Workspace apps like Sheets and Docs.</li>
+      <li><strong>When</strong>: Useful when you need automation, integration, or custom workflows.</li>
+      <li><strong>Why</strong>: Saves time and boosts productivity without third-party tools.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Creative Uses of Apps Script</h2>
+    <ul>
+      <li>Auto-sending personalized emails from Sheets</li>
+      <li>Creating custom spreadsheet functions</li>
+      <li>Fetching data from external APIs into Sheets</li>
+      <li>Automated reports generation</li>
+      <li>Workflow automation for Google Forms responses</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Pros and Cons of Apps Script</h2>
+    <p><strong>Pros:</strong></p>
+    <ul>
+      <li>Beginner-friendly</li>
+      <li>Works seamlessly with Google apps</li>
+      <li>Completely free and cloud-based</li>
+    </ul>
+    <p><strong>Cons:</strong></p>
+    <ul>
+      <li>Limited execution time</li>
+      <li>Dependent on internet connection</li>
+      <li>Restricted to Google ecosystem</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>AI Conversation Reference</h2>
+    <p>This page was built with the support of an AI assistant to understand Apps Script and develop this project effectively.</p>
+    <p><strong>Example Chat:</strong> <a href="#">https://chat.openai.com/...</a></p>
+  </section>
 
   <script>
     fetch('https://script.google.com/macros/s/AKfycbyQkZoiVD2ZA7s3TQQykCiuXOZq6pb0NQyHqSdQAbakmZjWzigIuQENH4kXpvz1nEsLHw/exec')
       .then(response => response.json())
       .then(data => {
-        document.getElementById('ccg').innerText = data.totalCCG;
+        document.getElementById('ccg').innerText = data.totalCCG + "%";
       })
       .catch(error => {
         document.getElementById('ccg').innerText = "Error loading grade";
