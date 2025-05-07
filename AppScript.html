@@ -120,7 +120,7 @@
     fetch('https://script.google.com/macros/s/AKfycbyQkZoiVD2ZA7s3TQQykCiuXOZq6pb0NQyHqSdQAbakmZjWzigIuQENH4kXpvz1nEsLHw/exec')
       .then(response => response.json())
       .then(data => {
-        document.getElementById('ccg').innerText = data.totalCCG + "%";
+        document.getElementById('ccg').innerText = data.Assignments Completion %:;
       })
       .catch(error => {
         document.getElementById('ccg').innerText = "Error loading grade";
