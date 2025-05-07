@@ -118,14 +118,15 @@
 
   <script>
     fetch('https://script.google.com/macros/s/AKfycbyQkZoiVD2ZA7s3TQQykCiuXOZq6pb0NQyHqSdQAbakmZjWzigIuQENH4kXpvz1nEsLHw/exec')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('ccg').innerText = data.Total;
-      })
-      .catch(error => {
-        document.getElementById('ccg').innerText = "Error loading grade";
-        console.error("Fetch error:", error);
-      });
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('ccg').innerText = data.Total;
+  })
+  .catch(error => {
+    document.getElementById('ccg').innerText = "Error loading grade";
+    console.error("Fetch error:", error);
+  });
+
   </script>
 </body>
 </html>
