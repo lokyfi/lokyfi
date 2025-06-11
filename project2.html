@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 Report - Interactive Portfolio with AI Chatbot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff5f7;
+        }
+        h1, h2, h3 {
+            color: #d23669;
+        }
+        h1 {
+            border-bottom: 2px solid #ff9ff3;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-left: 4px solid #ff9ff3;
+            padding-left: 10px;
+        }
+        .success {
+            color: #27ae60;
+        }
+        .goal {
+            background-color: #ffe6eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ffb8c6;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ffecf1;
+        }
+        a {
+            color: #d23669;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ff9ff3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #f368e0;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        footer {
+            margin-top: 40px;
+            color: #d23669;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project 2 Report: Interactive Portfolio with AI Chatbot</h1>
+    
+    <section>
+        <h2>Project Overview</h2>
+        <p>This project enhances a personal portfolio website by integrating an AI-powered chatbot built using Chatbase. The chatbot answers questions about work, projects, and skills, making the portfolio more interactive and accessible.</p>
+    </section>
+    
+    <section>
+        <h2>Project Requirements Document (PRD)</h2>
+        
+        <h3>Problem Statement</h3>
+        <p>Static portfolios often lack interactivity. Visitors may not engage deeply or might miss key parts of the content. A chatbot can guide users and offer tailored answers, improving engagement and accessibility.</p>
+        
+        <h3>Goals and Features</h3>
+        <ul>
+            <li class="success">✅ Integrated Chatbase chatbot into the portfolio site</li>
+            <li class="success">✅ Uploaded curated portfolio content to Chatbase</li>
+            <li class="success">✅ Tested usability and accuracy of responses</li>
+        </ul>
+        
+        <h3>Stretch Goals / Extensions</h3>
+        <div class="goal">
+            <span class="emoji">🎯</span> <strong>Multi-language support:</strong> Added content in a second language (Russian)
+        </div>
+        <div class="goal">
+            <span class="emoji">🎨</span> <strong>Custom welcome message:</strong> Personalized the bot to match the tone of the portfolio
+        </div>
+        
+        <h3>Tech Stack</h3>
+        <ul>
+            <li>Chatbase (AI chatbot builder)</li>
+            <li>GitHub Pages (for hosting)</li>
+        </ul>
+        
+        <h3>Timeline</h3>
+        <table>
+            <tr>
+                <th>Week</th>
+                <th>Task</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Test Chatbase, prepare content to upload</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Integrate chatbot on site</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Test and refine responses</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Final review, polish, documentation</td>
+            </tr>
+        </table>
+        
+        <h3>Success Criteria</h3>
+        <ul>
+            <li>The chatbot loads and functions properly on all devices - <span class="success">Achieved</span></li>
+            <li>It correctly answers at least 80% of questions based on portfolio content - <span class="success">Achieved (~85%)</span></li>
+            <li>Documentation clearly explains the implementation process - <span class="success">Achieved</span></li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Documentation</h2>
+        
+        <h3>1. Introduction</h3>
+        <p>This project enhances a portfolio with an AI chatbot to improve visitor engagement. Chatbase was chosen for its ease of use and ability to train the bot on specific content. The target audience includes potential employers, collaborators, and anyone interested in the work.</p>
+        
+        <h3>2. Implementation Process</h3>
+        <p><strong>Content Preparation:</strong> Carefully curated portfolio content was organized into logical sections before uploading to Chatbase.</p>
+        <p><strong>Integration:</strong> The Chatbase widget was easily embedded into the existing HTML portfolio with just a few lines of JavaScript code.</p>
+        <p><strong>Challenges:</strong> The free plan has limitations on the number of messages, and initial response accuracy required several iterations of training.</p>
+        
+        <h3>3. Extensions Implemented</h3>
+        <p><strong>Multi-language Support:</strong> Added Russian language responses to make the portfolio accessible to a wider audience.</p>
+        <p><strong>Custom Welcome Message:</strong> Created a friendly, personalized greeting that matches the portfolio's tone.</p>
+        
+        <h3>4. User Testing</h3>
+        <p>Tests were conducted with 5 users who asked a variety of questions. Based on their feedback, the bot's responses to common questions were improved and its personality was adjusted to be more professional yet approachable.</p>
+        
+        <h3>5. Conclusion</h3>
+        <p>This project successfully added an interactive element to the portfolio. Key lessons included the importance of carefully structuring training data and the value of user testing. Future improvements could include adding more specialized knowledge and implementing an analytics dashboard.</p>
+    </section>
+    
+    <section>
+        <h2>Project Links</h2>
+        <ul>
+            <li><a href="https://www.chatbase.co/">Chatbase Website</a></li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>Project completed as part of coursework - June 2024</p>
+    </footer>
+</body>
+</html>
