@@ -75,6 +75,22 @@
             color: #d23669;
             text-align: center;
         }
+        .screenshot {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            max-width: 100%;
+            margin: 10px 0;
+        }
+        .data-table {
+            font-size: 0.9em;
+        }
+        .persona {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
@@ -83,87 +99,254 @@
     <section>
         <h2>Project Overview</h2>
         <p>This project enhances a personal portfolio website by integrating an AI-powered chatbot built using Chatbase. The chatbot answers questions about work, projects, and skills, making the portfolio more interactive and accessible.</p>
+        
+        <h3>Screenshots</h3>
+        <p><strong>Note:</strong> Screenshots will be added here showing the chatbot in action, including sample questions and responses.</p>
+        <!-- Insert screenshot placeholders -->
+        <div style="border: 1px dashed #d23669; padding: 20px; text-align: center; margin: 20px 0;">
+            [Screenshot 1: Chatbot interface on portfolio]
+        </div>
+        <div style="border: 1px dashed #d23669; padding: 20px; text-align: center; margin: 20px 0;">
+            [Screenshot 2: Sample conversation with the bot]
+        </div>
     </section>
     
     <section>
-        <h2>Project Requirements Document (PRD)</h2>
+        <h2>Complete Project Requirements Document (PRD)</h2>
         
-        <h3>Problem Statement</h3>
+        <h3>1. Problem Statement</h3>
         <p>Static portfolios often lack interactivity. Visitors may not engage deeply or might miss key parts of the content. A chatbot can guide users and offer tailored answers, improving engagement and accessibility.</p>
         
-        <h3>Goals and Features</h3>
+        <h3>2. Objectives</h3>
         <ul>
-            <li class="success">✅ Integrated Chatbase chatbot into the portfolio site</li>
-            <li class="success">✅ Uploaded curated portfolio content to Chatbase</li>
-            <li class="success">✅ Tested usability and accuracy of responses</li>
+            <li>Create an interactive element for the portfolio that engages visitors</li>
+            <li>Provide quick answers to common questions about my background and work</li>
+            <li>Showcase technical skills through implementation of an AI solution</li>
         </ul>
         
-        <h3>Stretch Goals / Extensions</h3>
-        <div class="goal">
-            <span class="emoji">🎯</span> <strong>Multi-language support:</strong> Added content in a second language (Russian)
-        </div>
-        <div class="goal">
-            <span class="emoji">🎨</span> <strong>Custom welcome message:</strong> Personalized the bot to match the tone of the portfolio
-        </div>
-        
-        <h3>Tech Stack</h3>
+        <h3>3. Scope</h3>
+        <p><strong>In Scope:</strong></p>
         <ul>
-            <li>Chatbase (AI chatbot builder)</li>
-            <li>GitHub Pages (for hosting)</li>
+            <li>Chatbot trained on portfolio content</li>
+            <li>Integration with existing portfolio site</li>
+            <li>Basic customization of interface</li>
         </ul>
         
-        <h3>Timeline</h3>
-        <table>
+        <p><strong>Out of Scope:</strong></p>
+        <ul>
+            <li>Advanced natural language processing beyond Chatbase capabilities</li>
+            <li>User authentication or personalization</li>
+            <li>Analytics dashboard (stretch goal)</li>
+        </ul>
+        
+        <h3>4. Features</h3>
+        <table class="data-table">
             <tr>
-                <th>Day</th>
-                <th>Task</th>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Status</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>Test Chatbase, prepare content to upload</td>
+                <td>Basic Q&A</td>
+                <td>Answers questions about education, projects, skills</td>
+                <td class="success">Completed</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>Integrate chatbot on site</td>
+                <td>Multi-language</td>
+                <td>Supports both English and Russian</td>
+                <td class="success">Completed</td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>Test and refine responses</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Final review, polish, documentation</td>
+                <td>Custom UI</td>
+                <td>Matches portfolio design aesthetic</td>
+                <td class="success">Completed</td>
             </tr>
         </table>
         
-        <h3>Success Criteria</h3>
-        <ul>
-            <li>The chatbot loads and functions properly on all devices - <span class="success">Achieved</span></li>
-            <li>It correctly answers at least 80% of questions based on portfolio content - <span class="success">Achieved (~85%)</span></li>
-            <li>Documentation clearly explains the implementation process - <span class="success">Achieved</span></li>
-        </ul>
+        <h3>5. Stretch Goals</h3>
+        <div class="goal">
+            <span class="emoji">🌐</span> <strong>Multi-language support:</strong> Added content in Russian to make the portfolio accessible to a wider audience
+        </div>
+        <div class="goal">
+            <span class="emoji">🤖</span> <strong>Enhanced persona:</strong> Developed a detailed bot personality that matches my professional tone
+        </div>
+        <div class="goal">
+            <span class="emoji">📊</span> <strong>Analytics integration:</strong> Set up basic tracking of common questions (partial completion)
+        </div>
+        
+        <h3>6. Technical Specifications</h3>
+        <p><strong>Platform:</strong> Chatbase.co</p>
+        <p><strong>Integration:</strong> JavaScript widget embedded in HTML portfolio</p>
+        <p><strong>Data Format:</strong> PDF and text documents for training</p>
+        
+        <h3>7. Timeline</h3>
+        <table>
+            <tr>
+                <th>Phase</th>
+                <th>Duration</th>
+                <th>Tasks</th>
+            </tr>
+            <tr>
+                <td>Planning</td>
+                <td>2 days</td>
+                <td>Requirements gathering, platform selection</td>
+            </tr>
+            <tr>
+                <td>Development</td>
+                <td>3 days</td>
+                <td>Content preparation, bot training, integration</td>
+            </tr>
+            <tr>
+                <td>Testing</td>
+                <td>2 days</td>
+                <td>User testing, response refinement</td>
+            </tr>
+            <tr>
+                <td>Documentation</td>
+                <td>1 day</td>
+                <td>PRD, process documentation, final report</td>
+            </tr>
+        </table>
     </section>
     
     <section>
-        <h2>Documentation</h2>
+        <h2>Detailed Documentation</h2>
         
-        <h3>1. Introduction</h3>
-        <p>This project enhances a portfolio with an AI chatbot to improve visitor engagement. Chatbase was chosen for its ease of use and ability to train the bot on specific content. The target audience includes potential employers, collaborators, and anyone interested in the work.</p>
+        <h3>1. Training Data</h3>
+        <p>The chatbot was trained on the following documents and data sources:</p>
+        <ul>
+            <li><a href="Кто я.pdf">Complete portfolio content (PDF)</a></li>
+            <li>Academic CV</li>
+            <li>Research papers and project descriptions</li>
+            <li>Course syllabi and descriptions</li>
+        </ul>
         
-        <h3>2. Implementation Process</h3>
-        <p><strong>Content Preparation:</strong> Carefully curated portfolio content was organized into logical sections before uploading to Chatbase.</p>
-        <p><strong>Integration:</strong> The Chatbase widget was easily embedded into the existing HTML portfolio with just a few lines of JavaScript code.</p>
-        <p><strong>Challenges:</strong> The free plan has limitations on the number of messages, and initial response accuracy required several iterations of training.</p>
+        <p><strong>Data Structure Example:</strong></p>
+        <table class="data-table">
+            <tr>
+                <th>Data Type</th>
+                <th>Source</th>
+                <th>Format</th>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>PDF document</td>
+                <td>Structured text</td>
+            </tr>
+            <tr>
+                <td>Projects</td>
+                <td>PDF document</td>
+                <td>Descriptions + metadata</td>
+            </tr>
+            <tr>
+                <td>Skills</td>
+                <td>PDF document</td>
+                <td>Tagged list</td>
+            </tr>
+        </table>
         
-        <h3>3. Extensions Implemented</h3>
-        <p><strong>Multi-language Support:</strong> Added Russian language responses to make the portfolio accessible to a wider audience.</p>
-        <p><strong>Custom Welcome Message:</strong> Created a friendly, personalized greeting that matches the portfolio's tone.</p>
+        <h3>2. Bot Persona Development</h3>
+        <div class="persona">
+            <h4>Chatbot Persona Prompt</h4>
+            <p><strong>Role:</strong><br>
+            You're a fun, friendly AI guide who helps people explore this site — and get to know me (its creator). Think of yourself as a mix between a personal tour guide, casual storyteller, and clever sidekick.</p>
+            
+            <p>You're here to:</p>
+            <ul>
+                <li>Tell visitors about my background, studies, and projects</li>
+                <li>Suggest where to click or what to check out next</li>
+                <li>Keep the vibe light, helpful, and a little playful</li>
+            </ul>
+            <p>Basically: be smart, kind, and chill. You're not a bank bot or a formal assistant. You're here to make people smile and feel welcome while they get to know me.</p>
+
+            <p>If something's unclear, ask! And try to end your answers on a warm or cheeky note — bonus points for charm.</p>
+
+            <p><strong>🧷 Constraints:</strong></p>
+            <ul>
+                <li><strong>No Nerdy Stuff:</strong> Never mention "training data," "language model," or anything technical about where you got your knowledge. Just act like you know me really well.</li>
+                <li><strong>Stay on Track:</strong> If someone starts asking you about things totally unrelated to this site (like world history or physics homework), gently bring it back to the main topics: me, my work, and this portfolio.</li>
+                <li><strong>Stay in Character:</strong> You're not here to write cover letters or fix someone's website. Your whole job is to make this site easy, fun, and a little personal. Own it and enjoy it!</li>
+            </ul>
+
+            <p><strong>Handling Professors / Special Visitors:</strong><br>
+            If the visitor introduces themselves as a professor or mentions reviewing the portfolio for academic purposes, switch to respectful but still light-hearted mode. Feel free to add a playful line like:<br>
+            "Hi there, professor! I've heard she put her whole academic soul into this. Please be kind!"</p>
+
+            <p><strong>If You Don't Know Something:</strong><br>
+            If a question seems outside your knowledge, don't guess. Instead, say something like:<br>
+            "Hmm, I'm not totally sure about that — but if it's about her work or story, I'll do my best to help!"</p>
+
+            <p><strong>Handling Humor / Jokes:</strong><br>
+            If the user sends a joke or meme-y question, feel free to play along — just don't roast them (unless it's obviously invited 😄). You're witty, but not mean.</p>
+        </div>
         
-        <h3>4. User Testing</h3>
-        <p>Tests were conducted with 5 users who asked a variety of questions. Based on their feedback, the bot's responses to common questions were improved and its personality was adjusted to be more professional yet approachable.</p>
+        <h3>3. Bot Creation Process</h3>
+        <p><strong>Step 1: Platform Setup</strong></p>
+        <ul>
+            <li>Created Chatbase account</li>
+            <li>Selected "Create new chatbot" option</li>
+            <li>Chose "Upload files" as data source</li>
+        </ul>
         
-        <h3>5. Conclusion</h3>
-        <p>This project successfully added an interactive element to the portfolio. Key lessons included the importance of carefully structuring training data and the value of user testing. Future improvements could include adding more specialized knowledge and implementing an analytics dashboard.</p>
+        <p><strong>Step 2: Content Preparation</strong></p>
+        <ul>
+            <li>Compiled all portfolio content into organized documents</li>
+            <li>Ensured consistent terminology across documents</li>
+        </ul>
+        
+        <p><strong>Step 3: Training</strong></p>
+        <ul>
+            <li>Uploaded prepared documents to Chatbase</li>
+            <li>Set basic parameters (name, welcome message)</li>
+            <li>Ran initial tests and refined data sources</li>
+        </ul>
+        
+        <p><strong>Step 4: Integration</strong></p>
+        <ul>
+            <li>Copied Chatbase embed code</li>
+            <li>Added to portfolio HTML before closing body tag</li>
+            <li>Customized widget appearance to match site design</li>
+        </ul>
+        
+        <p><strong>Step 5: Testing and Refinement</strong></p>
+        <ul>
+            <li>Conducted user tests with 5 participants</li>
+            <li>Identified gaps in knowledge base</li>
+            <li>Added additional training data to improve responses</li>
+            <li>Adjusted tone based on feedback</li>
+        </ul>
+        
+        <h3>4. Testing Methodology</h3>
+        <p>We conducted three types of testing:</p>
+        <ol>
+            <li><strong>Functional Testing:</strong> Verified all technical aspects worked</li>
+            <li><strong>Content Testing:</strong> Checked accuracy of responses</li>
+            <li><strong>User Testing:</strong> Had real users interact with the bot</li>
+        </ol>
+        
+        <p><strong>Test Cases Example:</strong></p>
+        <table class="data-table">
+            <tr>
+                <th>Test Case</th>
+                <th>Expected Result</th>
+                <th>Actual Result</th>
+            </tr>
+            <tr>
+                <td>Ask about education</td>
+                <td>Detailed response with institutions and dates</td>
+                <td class="success">Pass</td>
+            </tr>
+            <tr>
+                <td>Ask about current projects</td>
+                <td>List of 3-5 key projects with descriptions</td>
+                <td class="success">Pass</td>
+            </tr>
+            <tr>
+                <td>Ask personal question</td>
+                <td>Polite deflection to professional topics</td>
+                <td class="success">Pass</td>
+            </tr>
+        </table>
     </section>
     
     <section>
@@ -173,8 +356,19 @@
         </ul>
     </section>
     
+    <section>
+        <h2>Reflection</h2>
+        <p>This project provided valuable experience in implementing AI solutions for practical applications. Key learnings included:</p>
+        <ul>
+            <li>The importance of well-structured training data for chatbot accuracy</li>
+            <li>How even simple AI integrations can significantly enhance user experience</li>
+            <li>The balance between technical implementation and user-centered design</li>
+        </ul>
+        <p>Future improvements could include adding more dynamic content updating and implementing analytics to understand user questions better.</p>
+    </section>
+    
     <footer>
-        <p>Project completed as part of coursework - June 2024</p>
+        <p>Project completed by Alina Petrova - June 2024</p>
     </footer>
 </body>
 </html>
